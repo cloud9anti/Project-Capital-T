@@ -12,6 +12,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "rootDir": ".",
+    "resolveJsonModule": true,
     "skipDefaultLibCheck": true,
     "skipLibCheck": true,
     "sourceMap": true,
