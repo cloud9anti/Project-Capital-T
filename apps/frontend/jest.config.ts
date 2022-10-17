@@ -8,7 +8,7 @@ const config: Config.InitialOptions = {
     '^.+\\.[tj]sx?$': ['babel-jest', { presets: ['@nrwl/next/babel'] }],
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/packages/frontend',
+  coverageDirectory: '../../coverage/apps/frontend',
 };
 
 export default config;

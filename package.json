@@ -43,7 +43,8 @@
     "ts-node": "10.9.1"
   },
   "workspaces": [
-    "packages/*"
+    "apps/*",
+    "libs/*"
   ],
   "dependencies": {
     "core-js": "^3.25.5",

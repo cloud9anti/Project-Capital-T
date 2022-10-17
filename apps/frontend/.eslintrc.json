@@ -5,10 +5,10 @@
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "parserOptions": {
-        "project": ["packages/frontend/tsconfig(.*)?.json"]
+        "project": ["apps/frontend/tsconfig(.*)?.json"]
       },
       "rules": {
-        "@next/next/no-html-link-for-pages": ["error", "packages/frontend/pages"],
+        "@next/next/no-html-link-for-pages": ["error", "apps/frontend/pages"],
         "import/no-default-export": "off"
       }
     },
