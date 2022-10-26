@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "jsx": "react",
+    "jsx": "react-jsx",
     "module": "commonjs",
     "outDir": "../../dist/out-tsc",
     "types": ["jest", "node"]

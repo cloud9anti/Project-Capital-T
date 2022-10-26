@@ -63,7 +63,7 @@
       "executor": "nx:run-commands",
       "options": {
         "color": true,
-        "commands": ["tsc -p apps/backend/tsconfig.json --pretty"],
+        "commands": ["tsc -p apps/frontend/tsconfig.json --pretty", "tsc -p apps/frontend/tsconfig.spec.json --pretty"],
         "parallel": false
       }
     }
