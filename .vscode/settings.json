@@ -1,0 +1,14 @@
+{
+  "[json][jsonc]": {
+    "editor.formatOnSave": true
+  },
+  "[typescript][javascript][typescriptreact][javascriptreact]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true,
+      "source.fixAll.eslint": true
+    },
+    "editor.formatOnSave": false
+  },
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.tsdk": "node_modules/typescript/lib"
+}

@@ -1,0 +1,71 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "frontend",
+  "projectType": "application",
+  "sourceRoot": "apps/frontend",
+  "tags": [],
+  "targets": {
+    "build": {
+      "configurations": {
+        "development": {
+          "outputPath": "apps/frontend"
+        },
+        "production": {}
+      },
+      "defaultConfiguration": "production",
+      "executor": "@nrwl/next:build",
+      "options": {
+        "outputPath": "dist/apps/frontend",
+        "root": "apps/frontend"
+      },
+      "outputs": ["{options.outputPath}"]
+    },
+    "export": {
+      "executor": "@nrwl/next:export",
+      "options": {
+        "buildTarget": "frontend:build:production"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/frontend/**/*.{ts,tsx,js,jsx}"]
+      },
+      "outputs": ["{options.outputFile}"]
+    },
+    "serve": {
+      "configurations": {
+        "development": {
+          "buildTarget": "frontend:build:development",
+          "dev": true
+        },
+        "production": {
+          "buildTarget": "frontend:build:production",
+          "dev": false
+        }
+      },
+      "defaultConfiguration": "development",
+      "executor": "@nrwl/next:server",
+      "options": {
+        "buildTarget": "frontend:build",
+        "dev": true
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "apps/frontend/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"]
+    },
+    "typecheck": {
+      "executor": "nx:run-commands",
+      "options": {
+        "color": true,
+        "commands": ["tsc -p apps/frontend/tsconfig.json --pretty", "tsc -p apps/frontend/tsconfig.spec.json --pretty"],
+        "parallel": false
+      }
+    }
+  }
+}
