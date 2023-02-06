@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState } from 'react';
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
@@ -8,28 +9,42 @@ import { ReactSearchAutocomplete } from 'react-search-autocomplete'
 
 
 
+
 function Index() {
+
+
+
   // note: the id field is mandatory
   const items = [
     {
       id: 0,
-      name: 'What is the trans agenda?'
+      name: 'What is the trans agenda?',
+      answer: 'There isnt one'
+     
     },
     {
       id: 1,
-      name: 'What does it mean to be trans?'
+      name: 'What does it mean to be trans?',
+      answer: 'It is different for each person',
+      
     },
     {
       id: 2,
-      name: 'Why should kids be allowed to take hormones?'
+      name: 'Why should kids be allowed to take hormones?',
+      answer: 'Why not?'
+      
     },
     {
       id: 3,
-      name: 'Where can I learn more about what it is like to be trans?'
+      name: 'Where can I learn more about what it is like to be trans?',
+      answer: 'Here are some resources'
+      
     },
     {
       id: 4,
-      name: 'How can I support someone who recently came out as trans?'
+      name: 'How can I support someone who recently came out as trans?',
+      answer: 'Here are some suggestions.'
+      
     }
   ]
 
@@ -118,6 +133,30 @@ function Index() {
           </AccordionDetails>
         </Accordion>
       </blockquote>
+
+
+      {items.map((item, index) => (
+        <div key={index}>
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+            <Typography>{item.name}</Typography>
+            </AccordionSummary>
+
+
+
+            <AccordionDetails>
+              {item.answer}
+              </AccordionDetails>
+              
+            
+          </Accordion>
+        </div>
+      ))}
+
     </div>
   )
 }
