@@ -46,7 +46,7 @@ function Index() {
 
   const handleOnSelect = (item) => {
     // the item selected
-    console.log(item)
+    console.log("selected: ", item.id)
   }
 
   const handleOnFocus = () => {
