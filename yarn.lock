@@ -7559,6 +7559,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fuse.js@npm:^6.5.3":
+  version: 6.6.2
+  resolution: "fuse.js@npm:6.6.2"
+  checksum: 17ae758ce205276ebd88bd9c9f088a100be0b4896abac9f6b09847151269d1690f41d7f98ff5813d4a58973162dbd99d0072ce807020fee6f9de60170f6b08eb
+  languageName: node
+  linkType: hard
+
 "gauge@npm:^4.0.3":
   version: 4.0.4
   resolution: "gauge@npm:4.0.4"
@@ -11549,6 +11556,7 @@ __metadata:
     react: 18.2.0
     react-dom: 18.2.0
     react-is: 18.2.0
+    react-search-autocomplete: ^8.3.1
     react-test-renderer: 18.2.0
     regenerator-runtime: 0.13.10
     shx: ^0.3.3
@@ -11743,6 +11751,19 @@ __metadata:
   version: 0.10.0
   resolution: "react-refresh@npm:0.10.0"
   checksum: 089b8ea9ad8038046c0467a2476595eedab9e30620f50daa50e844c81d626de43a44a6a628256ae58e68885d5fe1d7e05074ddfd99ece3808b013d043f0c6030
+  languageName: node
+  linkType: hard
+
+"react-search-autocomplete@npm:^8.3.1":
+  version: 8.3.1
+  resolution: "react-search-autocomplete@npm:8.3.1"
+  dependencies:
+    fuse.js: ^6.5.3
+    styled-components: ^5.3.3
+  peerDependencies:
+    react: ^17.0.2 || ^16.0.2 || ^18.0.0
+    react-dom: ^17.0.2 || ^16.0.2 || ^18.0.0
+  checksum: b278303b8d42aaa953ad74102cb74d5bd97c81524d473f90206633dd05f79dc789c74cc587ec59901e6c510111392222ae4dae4b4d6b215e175ce473d20cadb6
   languageName: node
   linkType: hard
 
@@ -13036,7 +13057,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"styled-components@npm:5.3.6":
+"styled-components@npm:5.3.6, styled-components@npm:^5.3.3":
   version: 5.3.6
   resolution: "styled-components@npm:5.3.6"
   dependencies:
